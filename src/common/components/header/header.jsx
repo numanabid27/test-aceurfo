@@ -1,5 +1,6 @@
 "use client";
 import { Menu, X, Calculator } from 'lucide-react';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Header() {
@@ -17,18 +18,22 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Services
-            </a>
-            <a href="#pricing" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Pricing
-            </a>
-            <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Home
+            </Link>
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               About
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            </Link>
+            <Link href="/blogs" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Blogs
+            </Link>
+            <Link href="#pricing" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Pricing
+            </Link>
+           
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* CTA Buttons */}

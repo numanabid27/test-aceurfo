@@ -63,22 +63,24 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <a href="#services" className="text-gray-700 hover:text-blue-600 font-medium">
-                Services
-              </a>
-              <a href="#pricing" className="text-gray-700 hover:text-blue-600 font-medium">
-                Pricing
-              </a>
-              <a href="#about" className="text-gray-700 hover:text-blue-600 font-medium">
-                About
-              </a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium">
-                Contact
-              </a>
+              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Home
+            </Link>
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              About
+            </Link>
+            <Link href="/blogs" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Blogs
+            </Link>
+            <Link href="#pricing" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Pricing
+            </Link>
+           
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Contact
+            </Link>
               <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
-                <button className="text-gray-700 hover:text-blue-600 font-medium text-left">
-                  Sign In
-                </button>
+               
                 <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
                   Get Started
                 </button>

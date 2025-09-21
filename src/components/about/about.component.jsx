@@ -2,11 +2,16 @@ import { Award } from "lucide-react";
 import { STATS, TEAM } from "../home.constant";
 import Image from "next/image";
 import banner from "@/common/assets/img/about.jpg"
+import Banner from "@/common/components/banner/banner";
 
 export default function AboutComponent() {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="pb-20 bg-white">
+      <Banner title="About" desc={<>At <span class="font-semibold">Bookkeeping.com</span>, we offer a wide
+                range of financial services tailored to meet the diverse needs of our
+                clients. Our team of experts is committed to delivering exceptional
+                service and strategic solutions. Explore our services below:</>} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         {/* About Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>

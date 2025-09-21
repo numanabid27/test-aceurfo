@@ -2,6 +2,8 @@
 import { Menu, X, Calculator } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import logo from "@/common/assets/img/logo.png"
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,36 +14,33 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Calculator className="h-8 w-8 text-blue-600 mr-2" />
-            <span className="text-2xl font-bold text-gray-900">Aceurfo</span>
+            <Image src={logo} width={180} height={180} alt="" />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-[#0A3A6A] font-medium transition-colors">
               Home
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/about" className="text-gray-700 hover:text-[#0A3A6A] font-medium transition-colors">
               About
             </Link>
-            <Link href="/blogs" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/blogs" className="text-gray-700 hover:text-[#0A3A6A] font-medium transition-colors">
               Blogs
             </Link>
-            <Link href="#pricing" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="#pricing" className="text-gray-700 hover:text-[#0A3A6A] font-medium transition-colors">
               Pricing
             </Link>
            
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/contact" className="text-gray-700 hover:text-[#0A3A6A] font-medium transition-colors">
               Contact
             </Link>
           </nav>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Sign In
-            </button>
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+           
+            <button className="bg-[#0A3A6A] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
               Get Started
             </button>
           </div>
@@ -63,25 +62,25 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <Link href="/" className="text-gray-700 hover:text-[#0A3A6A] font-medium transition-colors">
               Home
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/about" className="text-gray-700 hover:text-[#0A3A6A] font-medium transition-colors">
               About
             </Link>
-            <Link href="/blogs" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/blogs" className="text-gray-700 hover:text-[#0A3A6A] font-medium transition-colors">
               Blogs
             </Link>
-            <Link href="#pricing" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="#pricing" className="text-gray-700 hover:text-[#0A3A6A] font-medium transition-colors">
               Pricing
             </Link>
            
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/contact" className="text-gray-700 hover:text-[#0A3A6A] font-medium transition-colors">
               Contact
             </Link>
               <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
                
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                <button className="bg-[#0A3A6A] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
                   Get Started
                 </button>
               </div>

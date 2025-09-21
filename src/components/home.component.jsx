@@ -11,7 +11,7 @@ export default function HomePage() {
             <div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Professional
-                <span className="text-blue-600 block">Bookkeeping</span>
+                <span className="text-[#0A3A6A] block">Bookkeeping</span>
                 Made Simple
                 </h1>
                 <p className="text-xl text-gray-600 mt-6 leading-relaxed">
@@ -36,7 +36,7 @@ export default function HomePage() {
 
                 {/* CTA Buttons */}
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center">
+                <button className="bg-[#0A3A6A] text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center">
                     Start Free Trial
                     <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
@@ -114,19 +114,19 @@ export default function HomePage() {
                 return (
                     <div key={index} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 group">
                         <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors">
-                        <IconComponent className="h-8 w-8 text-blue-600" />
+                        <IconComponent className="h-8 w-8 text-[#0A3A6A]" />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                         <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                         <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                            <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                            <div className="w-2 h-2 bg-[#0A3A6A] rounded-full mr-3"></div>
                             {feature}
                             </li>
                         ))}
                         </ul>
-                        <button className="mt-6 text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                        <button className="mt-6 text-[#0A3A6A] font-semibold hover:text-blue-700 transition-colors">
                         Learn More →
                         </button>
                     </div>
@@ -146,7 +146,7 @@ export default function HomePage() {
                 <div class="absolute -top-6 left-6">
                     <img src="https://img.icons8.com/color/48/team.png" alt="Expert Team" />
                 </div>
-                <h3 class="text-lg font-semibold text-indigo-600 mt-8">Expert Team</h3>
+                <h3 class="text-lg font-semibold text-[#0A3A6A] mt-8">Expert Team</h3>
                 <p class="text-gray-700 mt-2">
                     Our team comprises experienced and certified professionals who serve your industry exclusively.
                 </p>
@@ -157,7 +157,7 @@ export default function HomePage() {
                 <div class="absolute -top-6 left-6">
                     <img src="https://img.icons8.com/color/48/puzzle.png" alt="Tailored Solutions" />
                 </div>
-                <h3 class="text-lg font-semibold text-indigo-600 mt-8">Tailored Solutions</h3>
+                <h3 class="text-lg font-semibold text-[#0A3A6A] mt-8">Tailored Solutions</h3>
                 <p class="text-gray-700 mt-2">
                     We customize our services to meet your unique financial needs.
                 </p>
@@ -167,7 +167,7 @@ export default function HomePage() {
                 <div class="absolute -top-6 left-6">
                     <img src="https://img.icons8.com/color/48/goal.png" alt="Client Focus" />
                 </div>
-                <h3 class="text-lg font-semibold text-indigo-600 mt-8">Client Focus</h3>
+                <h3 class="text-lg font-semibold text-[#0A3A6A] mt-8">Client Focus</h3>
                 <p class="text-gray-700 mt-2">
                     Dedicated to providing exceptional client service and support.
                 </p>
@@ -196,7 +196,7 @@ export default function HomePage() {
                     }`}>
                     {plan.popular && (
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                        <div className="bg-[#0A3A6A] text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                             <Star className="w-4 h-4 mr-1" />
                             Most Popular
                         </div>
@@ -223,7 +223,7 @@ export default function HomePage() {
 
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                         plan.popular 
-                        ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                        ? 'bg-[#0A3A6A] text-white hover:bg-blue-700' 
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                     }`}>
                         Get Started
@@ -234,7 +234,7 @@ export default function HomePage() {
 
                 <div className="text-center mt-12">
                 <p className="text-gray-600 mb-4">Need a custom solution?</p>
-                <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <button className="text-[#0A3A6A] font-semibold hover:text-blue-700 transition-colors">
                     Contact us for enterprise pricing →
                 </button>
                 </div>
@@ -261,7 +261,7 @@ export default function HomePage() {
                     services, regardless of size or industry. That's why we've built scalable 
                     solutions that grow with your business.
                     </p>
-                    <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    <button className="bg-[#0A3A6A] text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
                     Learn More About Us
                     </button>
                 </div>

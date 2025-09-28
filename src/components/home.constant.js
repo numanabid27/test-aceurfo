@@ -2,39 +2,52 @@ import { Calculator, FileText, TrendingUp, Shield, Clock,  Award, Users } from '
 export const SERVICES = [
     {
       icon: Calculator,
-      title: 'Monthly Bookkeeping',
-      description: 'Complete monthly bookkeeping services including transaction categorization, reconciliation, and financial statement preparation.',
-      features: ['Bank reconciliation', 'Expense categorization', 'Monthly reports', 'QuickBooks setup']
+      title: 'Bookkeeping Services',
+      description: 'Get maximum business financial health with our comprehensive bookkeeping services. We handle all aspects...',
+      slug:"bookkeepings-services",
+      longDescription:"Get maximum business financial health with our comprehensive bookkeeping services. We handle all aspects of your bookkeeping operations, so that you can focus on your core areas. With our extensive financial analysis, you’ll always know about the resources for maximum growth. Our team ensures the accuracy of financial records, enabling informed decision-making that leads to increased profitability."
     },
     {
       icon: FileText,
-      title: 'Tax Preparation',
-      description: 'Year-round tax preparation and planning to ensure your books are always tax-ready and compliant.',
-      features: ['Tax planning', 'Quarterly filings', 'Year-end preparation', 'IRS correspondence']
+      title: 'Financial Reporting',
+      description: 'AccureCFO transforms financial reporting into a data-driven process that empowers businesses to make...',
+      slug: 'financial-reporting',
+      longDescription:"AccureCFO transforms financial reporting into a data-driven process that empowers businesses to make informed decisions. As an alternative to relying on static spreadsheets, AccureCFO delivers real-time, accurate, and visually rich reports tailored to bookkeeping needs. Thus, your business will gain access to automated profit and loss statements, balance sheets, cash flow reports, and much more. Therefore, these reports are accurate, ensuring that financial stakeholders can quickly grasp the company’s performance."
     },
     {
       icon: TrendingUp,
-      title: 'Financial Analysis',
-      description: 'In-depth financial analysis and reporting to help you understand your business performance and make informed decisions.',
-      features: ['Profit & loss analysis', 'Cash flow forecasting', 'Budget planning', 'KPI tracking']
+      title: 'Payables & Receivables Reporting',
+      description: 'AccureCFO makes handling payable and receivable simple, transparent, and efficient. Through real-time...',
+      slug: 'payables-&-receivables-reporting',
+      longDescription:"AccureCFO makes handling payable and receivable simple, transparent, and efficient. Through real-time reporting, businesses can smoothly track outstanding vendor obligations, due dates, and payment statuses while also monitoring customer invoices. Thus, this visibility helps your business to avoid late fees, support supplier relationships, and uphold a healthy cash flow, ensuring optimal working capital management."
     },
     {
       icon: Shield,
-      title: 'Compliance & Audit',
-      description: 'Ensure your business stays compliant with all regulations and is prepared for any audits or reviews.',
-      features: ['Compliance monitoring', 'Audit preparation', 'Documentation', 'Risk assessment']
+      title: 'Cash Flow Management',
+      description: 'AccureCFO simplifies cash flow management. We provide businesses with clear, real-time visibility into...',
+      slug: 'cash-flow-management',
+      longDescription:"AccureCFO simplifies cash flow management. We provide businesses with clear, real-time visibility into where money is coming from and where it is going. Through automated tracking of financing activities, it highlights daily operations, growth initiatives, and the impact of financing decisions on liquidity. Therefore, this enables you to verify the past transactions and find the immediate cash position with accuracy."
     },
     {
       icon: Clock,
-      title: 'Payroll Services',
-      description: 'Complete payroll management including processing, tax filings, and employee record maintenance.',
-      features: ['Payroll processing', 'Tax withholdings', 'Direct deposits', 'Employee records']
+      title: 'Software implementations',
+      description: 'AccureCFO ensures efficient software implementations by compounding technical expertise. Our deep...',
+      slug: 'software-implementations',
+      longDescription:"AccureCFO ensures efficient software implementations by compounding technical expertise. Our deep understanding of business finance makes us unique in the marketplace. From system selection to deployment, the process is carefully managed to align with business goals. Thus, the new tools integrate seamlessly with existing operations. Hence. this approach reduces disruptions, quickens adoption, and helps businesses quickly realize the value of their technological investments."
     },
     {
       icon: Users,
-      title: 'CFO Advisory',
-      description: 'Strategic financial guidance and CFO-level advisory services to help scale your business effectively.',
-      features: ['Strategic planning', 'Financial modeling', 'Investment analysis', 'Growth planning']
+      title: 'QuickBooks',
+      description: 'If you want to enhance the power of QuickBooks by combining its reliable accounting features, get in...',
+      slug: 'quickBooks',
+      longDescription:" If you want to enhance the power of QuickBooks by combining its reliable accounting features, get in touch with AccureCFO. While QuickBooks handles daily bookkeeping, AccureCFO takes the data a step further, transforming it into clear financial reports, performance dashboards, and actionable strategies. Hence, all these features can help businesses understand their proper financial health. Thus, this integration allows us to focus on growth and profitability"
+    },
+    {
+      icon: Users,
+      title: 'Xero',
+      description: 'AccureCFO comes with the power of Xero to deliver accurate bookkeeping services that are combined...',
+      slug: 'xero',
+      longDescription:"AccureCFO comes with the power of Xero to deliver accurate bookkeeping services that are combined with strategic financial insights. Furthermore, Xero modernizes accounting through automation, invoicing, and real-time bank feeds. AccureCFO confirms that the captured data interprets into evocative insights. By rotating raw numbers into actionable financial reports, your businesses get a clear picture of productivity, cash flow, and growth opportunities."
     }
 ];
 
@@ -116,4 +129,52 @@ export const TEAM = [
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
       bio: 'QuickBooks ProAdvisor with expertise in small business accounting and tax preparation.'
     }
-  ];
+];
+
+
+export const FAQS = [
+  {
+    question: "Does AccureCFO do all my bookkeeping tasks for me?",
+    answer:
+      "Our bookkeeping experts handle all your bookkeeping needs for you.  Each month, we will check that your books are accurate and that your deductions are maximized or not.",
+  },
+  {
+    question: "Is it compulsory to connect my business accounts to AccureCFO?",
+    answer:
+      "Yes: Connecting your accounts to AccureCFO automates repetitive tasks like data entry, saving you time and effort. It eliminates the need for manual uploads. Thus, this ensures our bookkeeping team can work efficiently.",
+  },
+  {
+    question: "Why does AccureCFO still need me to upload documents even if my accounts are connected?",
+    answer:
+      "Sometimes, we need some extra documents, such as account statements or receipts, to verify the accuracy of the information. Sharing files with the bookkeeping team is swift and easy, allowing for quick document uploads.",
+  },
+];
+
+
+export const STEPS = [
+  {
+    number: "01.",
+    title: "CONSULTATION",
+    description: "Its time for every business to become digital."
+  },
+  {
+    number: "02.",
+    title: "IMPLEMENTATION",
+    description: "We assist in mapping your business process on ideal."
+  },
+  {
+    number: "03.",
+    title: "CUSTOMIZATION",
+    description: "We expertise in customizing MS Dynamics out."
+  },
+  {
+    number: "04.",
+    title: "INTEGRATION",
+    description: "Our SI Engineer transform your multiple."
+  },
+  {
+    number: "05.",
+    title: "SUPPORT",
+    description: "We are experts at fashioning learning events."
+  },
+];

@@ -30,7 +30,7 @@ export default function AboutComponent() {
               bookkeeping services, regardless of size or industry. That's why
               we've built scalable solutions that grow with your business.
             </p>
-            <button className="bg-[#0A3A6A]text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+            <button className="bg-[#00A63E]text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
               Learn More About Us
             </button>
           </div>
@@ -50,7 +50,7 @@ export default function AboutComponent() {
           return (
             <div key={index} className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <IconComponent className="h-8 w-8 text-[#0A3A6A]" />
+                <IconComponent className="h-8 w-8 text-[#00A63E]" />
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-2">
                 {stat.number}
@@ -113,7 +113,7 @@ export default function AboutComponent() {
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">
                 {member.name}
                 </h4>
-                <p className="text-[#0A3A6A] font-medium mb-4">{member.role}</p>
+                <p className="text-[#00A63E] font-medium mb-4">{member.role}</p>
                 <p className="text-gray-600 leading-relaxed">{member.bio}</p>
             </div>
             ))}

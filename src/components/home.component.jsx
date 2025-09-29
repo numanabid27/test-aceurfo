@@ -2,6 +2,7 @@ import { ArrowRight, CheckCircle, Check, Star , Award } from 'lucide-react';
 import { FAQS, PLANS, SERVICES, STATS, STEPS, TEAM } from './home.constant';
 import Faqs from './faqs.component';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -13,7 +14,7 @@ export default function HomePage() {
                 <div>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                     Professional
-                    <span className="text-[#0A3A6A] block">Bookkeeping</span>
+                    <span className="text-[#00A63E] block">Bookkeeping</span>
                     Made Simple
                     </h1>
                     <p className="text-xl text-gray-600 mt-6 leading-relaxed">
@@ -38,7 +39,7 @@ export default function HomePage() {
 
                     {/* CTA Buttons */}
                     <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                    <button className="bg-[#0A3A6A] text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center">
+                    <button className="bg-[#00A63E] text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center">
                         Start Free Trial
                         <ArrowRight className="ml-2 h-5 w-5" />
                     </button>
@@ -107,17 +108,16 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {SERVICES.map((service, index) => {
-                    const IconComponent = service.icon;
+                {SERVICES?.map((service, index) => {
                     return (
                         <div key={index} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 group">
-                            <div className="bg-blue-100 w-16 h-16 rounded-lg mx-auto flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors">
-                                <IconComponent className="h-8 w-8 text-[#0A3A6A]" />
+                            <div className="mx-auto flex items-center justify-center mb-6">
+                                <Image src={service.icon} alt={service.title} className="w-16 h-16" />
                             </div>
                             <h3 className="text-xl text-center font-semibold text-gray-900 mb-4">{service.title}</h3>
                             <p className="text-gray-600 text-center mb-6 leading-relaxed">{service.description}</p>
                             
-                            <Link href={`offer-detail/${service.slug}`} className="mt-6 py-[10px] px-[19px] flex justify-center bg-[#0A3A6A] text-white rounded-[6px] w-fit mx-auto cursor-pointer font-medium  transition-colors">
+                            <Link href={`offer-detail/${service.slug}`} className="mt-6 py-[10px] px-[19px] flex justify-center bg-[#00A63E] text-white rounded-[6px] w-fit mx-auto cursor-pointer font-medium  transition-colors">
                                 Learn More →
                             </Link>
                         </div>
@@ -173,7 +173,7 @@ export default function HomePage() {
                     }`}>
                     {plan.popular && (
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-[#0A3A6A] text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                        <div className="bg-[#00A63E] text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
                             <Star className="w-4 h-4 mr-1" />
                             Most Popular
                         </div>
@@ -200,7 +200,7 @@ export default function HomePage() {
 
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                         plan.popular 
-                        ? 'bg-[#0A3A6A] text-white hover:bg-blue-700' 
+                        ? 'bg-[#00A63E] text-white hover:bg-blue-700' 
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                     }`}>
                         Get Started
@@ -211,7 +211,7 @@ export default function HomePage() {
 
                 <div className="text-center mt-12">
                 <p className="text-gray-600 mb-4">Need a custom solution?</p>
-                <button className="text-[#0A3A6A] font-semibold hover:text-blue-700 transition-colors">
+                <button className="text-[#00A63E] font-semibold hover:text-blue-700 transition-colors">
                     Contact us for enterprise pricing →
                 </button>
                 </div>
@@ -238,7 +238,7 @@ export default function HomePage() {
                     services, regardless of size or industry. That's why we've built scalable 
                     solutions that grow with your business.
                     </p>
-                    <button className="bg-[#0A3A6A] text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    <button className="bg-[#00A63E] text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
                     Learn More About Us
                     </button>
                 </div>

@@ -79,7 +79,7 @@ export default function ContactComponent() {
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-[#0A3A6A] text-white py-3 px-6 rounded-lg transition-colors font-semibold"
+                        className="w-full bg-[#00A63E] text-white py-3 px-6 rounded-lg transition-colors font-semibold"
                     >
                         Send Message
                     </button>
@@ -92,8 +92,8 @@ export default function ContactComponent() {
                     <h3 className="text-2xl font-semibold text-gray-900 mb-6">Get in touch</h3>
                     <div className="space-y-6">
                         <div className="flex items-start">
-                        <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                            <Phone className="h-6 w-6 text-[#0A3A6A]" />
+                        <div className=" p-3 rounded-lg mr-4">
+                            <Phone className="h-6 w-6 text-[#00A63E]" />
                         </div>
                         <div>
                             <h4 className="font-semibold text-gray-900">Phone</h4>
@@ -102,8 +102,8 @@ export default function ContactComponent() {
                         </div>
                         </div>
                         <div className="flex items-start">
-                        <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                            <Mail className="h-6 w-6 text-[#0A3A6A]" />
+                        <div className=" p-3 rounded-lg mr-4">
+                            <Mail className="h-6 w-6 text-[#00A63E]" />
                         </div>
                         <div>
                             <h4 className="font-semibold text-gray-900">Email</h4>
@@ -112,8 +112,8 @@ export default function ContactComponent() {
                         </div>
                         </div>
                         <div className="flex items-start">
-                        <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                            <MapPin className="h-6 w-6 text-[#0A3A6A]" />
+                        <div className=" p-3 rounded-lg mr-4">
+                            <MapPin className="h-6 w-6 text-[#00A63E]" />
                         </div>
                         <div>
                             <h4 className="font-semibold text-gray-900">Office</h4>
@@ -121,8 +121,8 @@ export default function ContactComponent() {
                         </div>
                         </div>
                         <div className="flex items-start">
-                        <div className="bg-blue-100 p-3 rounded-lg mr-4">
-                            <Clock className="h-6 w-6 text-[#0A3A6A]" />
+                        <div className=" p-3 rounded-lg mr-4">
+                            <Clock className="h-6 w-6 text-[#00A63E]" />
                         </div>
                         <div>
                             <h4 className="font-semibold text-gray-900">Business Hours</h4>
@@ -135,12 +135,12 @@ export default function ContactComponent() {
                     </div>
 
                     {/* CTA Card */}
-                    <div className="bg-[#0A3A6A] rounded-2xl shadow-lg p-8 text-white">
+                    <div className="bg-[#00A63E] rounded-2xl shadow-lg p-8 text-white">
                     <h3 className="text-2xl font-semibold mb-4">Ready to streamline your books?</h3>
                     <p className="mb-6 opacity-90">
                         Schedule a free consultation and see how we can help your business grow.
                     </p>
-                    <button className="bg-[#fff] text-[#0A3A6A] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                    <button className="bg-[#fff] text-[#00A63E] px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
                         Schedule Free Consultation
                     </button>
                     </div>

@@ -1,52 +1,75 @@
-import { Calculator, FileText, TrendingUp, Shield, Clock,  Award, Users } from 'lucide-react';
+import {  Shield, Clock,  Award, Users } from 'lucide-react';
+import finance from "@/common/assets/img/financial.jpg";
+import bookeeping from "@/common/assets/img/bookkeeping.jpg";
+import report from "@/common/assets/img/report.jpg";
+import cashFlow from "@/common/assets/img/cash-flow.jpg";
+import software from "@/common/assets/img/soft.jpg";
+import quickBook from "@/common/assets/img/quickBook.jpg"
+import xero from "@/common/assets/img/xero.jpg";
+import budget from "@/common/assets/img/budget.png"
+import blockChain from "@/common/assets/img/blockchain.png"
+import reports from "@/common/assets/img/report.png"
+import cash from "@/common/assets/img/cashh.png"
+import testing from "@/common/assets/img/testing.png"
+import accounting from "@/common/assets/img/accounting.png"
+import graph from "@/common/assets/img/graph-report.png"
+
+
 export const SERVICES = [
     {
-      icon: Calculator,
+      icon: budget,
       title: 'Bookkeeping Services',
       description: 'Get maximum business financial health with our comprehensive bookkeeping services. We handle all aspects...',
       slug:"bookkeepings-services",
-      longDescription:"Get maximum business financial health with our comprehensive bookkeeping services. We handle all aspects of your bookkeeping operations, so that you can focus on your core areas. With our extensive financial analysis, you’ll always know about the resources for maximum growth. Our team ensures the accuracy of financial records, enabling informed decision-making that leads to increased profitability."
+      longDescription:"Get maximum business financial health with our comprehensive bookkeeping services. We handle all aspects of your bookkeeping operations, so that you can focus on your core areas. With our extensive financial analysis, you’ll always know about the resources for maximum growth. Our team ensures the accuracy of financial records, enabling informed decision-making that leads to increased profitability.",
+      img:bookeeping
     },
     {
-      icon: FileText,
+      icon: blockChain,
       title: 'Financial Reporting',
       description: 'AccureCFO transforms financial reporting into a data-driven process that empowers businesses to make...',
       slug: 'financial-reporting',
-      longDescription:"AccureCFO transforms financial reporting into a data-driven process that empowers businesses to make informed decisions. As an alternative to relying on static spreadsheets, AccureCFO delivers real-time, accurate, and visually rich reports tailored to bookkeeping needs. Thus, your business will gain access to automated profit and loss statements, balance sheets, cash flow reports, and much more. Therefore, these reports are accurate, ensuring that financial stakeholders can quickly grasp the company’s performance."
+      longDescription:"AccureCFO transforms financial reporting into a data-driven process that empowers businesses to make informed decisions. As an alternative to relying on static spreadsheets, AccureCFO delivers real-time, accurate, and visually rich reports tailored to bookkeeping needs. Thus, your business will gain access to automated profit and loss statements, balance sheets, cash flow reports, and much more. Therefore, these reports are accurate, ensuring that financial stakeholders can quickly grasp the company’s performance.",
+      img:finance
     },
     {
-      icon: TrendingUp,
+      icon: reports,
       title: 'Payables & Receivables Reporting',
       description: 'AccureCFO makes handling payable and receivable simple, transparent, and efficient. Through real-time...',
-      slug: 'payables-&-receivables-reporting',
-      longDescription:"AccureCFO makes handling payable and receivable simple, transparent, and efficient. Through real-time reporting, businesses can smoothly track outstanding vendor obligations, due dates, and payment statuses while also monitoring customer invoices. Thus, this visibility helps your business to avoid late fees, support supplier relationships, and uphold a healthy cash flow, ensuring optimal working capital management."
+      slug: 'payables-receivables-reporting',
+      longDescription:"AccureCFO makes handling payable and receivable simple, transparent, and efficient. Through real-time reporting, businesses can smoothly track outstanding vendor obligations, due dates, and payment statuses while also monitoring customer invoices. Thus, this visibility helps your business to avoid late fees, support supplier relationships, and uphold a healthy cash flow, ensuring optimal working capital management.",
+      img:report
     },
     {
-      icon: Shield,
+      icon: cash,
       title: 'Cash Flow Management',
       description: 'AccureCFO simplifies cash flow management. We provide businesses with clear, real-time visibility into...',
       slug: 'cash-flow-management',
+      img:cashFlow,
       longDescription:"AccureCFO simplifies cash flow management. We provide businesses with clear, real-time visibility into where money is coming from and where it is going. Through automated tracking of financing activities, it highlights daily operations, growth initiatives, and the impact of financing decisions on liquidity. Therefore, this enables you to verify the past transactions and find the immediate cash position with accuracy."
     },
     {
-      icon: Clock,
+      icon: testing,
       title: 'Software implementations',
       description: 'AccureCFO ensures efficient software implementations by compounding technical expertise. Our deep...',
       slug: 'software-implementations',
+      img:software,
       longDescription:"AccureCFO ensures efficient software implementations by compounding technical expertise. Our deep understanding of business finance makes us unique in the marketplace. From system selection to deployment, the process is carefully managed to align with business goals. Thus, the new tools integrate seamlessly with existing operations. Hence. this approach reduces disruptions, quickens adoption, and helps businesses quickly realize the value of their technological investments."
     },
     {
-      icon: Users,
+      icon: accounting,
       title: 'QuickBooks',
       description: 'If you want to enhance the power of QuickBooks by combining its reliable accounting features, get in...',
       slug: 'quickBooks',
+      img:quickBook,
       longDescription:" If you want to enhance the power of QuickBooks by combining its reliable accounting features, get in touch with AccureCFO. While QuickBooks handles daily bookkeeping, AccureCFO takes the data a step further, transforming it into clear financial reports, performance dashboards, and actionable strategies. Hence, all these features can help businesses understand their proper financial health. Thus, this integration allows us to focus on growth and profitability"
     },
     {
-      icon: Users,
+      icon: graph,
       title: 'Xero',
       description: 'AccureCFO comes with the power of Xero to deliver accurate bookkeeping services that are combined...',
       slug: 'xero',
+      img:xero,
       longDescription:"AccureCFO comes with the power of Xero to deliver accurate bookkeeping services that are combined with strategic financial insights. Furthermore, Xero modernizes accounting through automation, invoicing, and real-time bank feeds. AccureCFO confirms that the captured data interprets into evocative insights. By rotating raw numbers into actionable financial reports, your businesses get a clear picture of productivity, cash flow, and growth opportunities."
     }
 ];

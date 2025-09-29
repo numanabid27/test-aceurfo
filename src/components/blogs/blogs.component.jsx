@@ -31,7 +31,7 @@ export default function Blogs() {
                 <p className="text-gray-600 text-sm mt-2 line-clamp-3">
                   {blog.description}
                 </p>
-                <button className="mt-4 inline-block text-[#0A3A6A] font-medium hover:underline">
+                <button className="mt-4 inline-block text-[#00A63E] font-medium hover:underline">
                   Read More →
                 </button>
               </div>

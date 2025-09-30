@@ -1,6 +1,8 @@
 import React from 'react';
 import { Calculator} from 'lucide-react';
 import Link from 'next/link';
+import logo from "@/common/assets/img/white-logo.png";
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -10,8 +12,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-1">
             <div className="flex items-center mb-4">
-              <Calculator className="h-8 w-8 text-blue-400 mr-2" />
-              <span className="text-2xl font-bold">BookKeeper Pro</span>
+              <Image src={logo} alt="AccureCFO" className="w-[204px]" />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Professional bookkeeping services that help businesses grow through 

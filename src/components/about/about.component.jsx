@@ -7,7 +7,7 @@ import Banner from "@/common/components/banner/banner";
 export default function AboutComponent() {
   return (
     <section id="about" className="pb-20 bg-white">
-      <Banner title="About" desc={<>At <span class="font-semibold">Bookkeeping.com</span>, we offer a wide
+      <Banner title="About" desc={<>At <span class="font-semibold">AccureCFO.com</span>, we offer a wide
                 range of financial services tailored to meet the diverse needs of our
                 clients. Our team of experts is committed to delivering exceptional
                 service and strategic solutions. Explore our services below:</>} />
@@ -30,7 +30,7 @@ export default function AboutComponent() {
               bookkeeping services, regardless of size or industry. That's why
               we've built scalable solutions that grow with your business.
             </p>
-            <button className="bg-[#00A63E]text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+            <button className="bg-[#00A63E]text-white px-8 py-3 rounded-lg hover:bg-[#00A63E] transition-colors font-semibold">
               Learn More About Us
             </button>
           </div>

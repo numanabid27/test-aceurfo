@@ -40,7 +40,7 @@ export default function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
            
-            <button className="bg-[#00A63E] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+            <button className="bg-[#00A63E] text-white px-6 py-2 rounded-lg hover:bg-[#00A63E] transition-colors font-medium">
               Get Started
             </button>
           </div>
@@ -80,7 +80,7 @@ export default function Header() {
             </Link>
               <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
                
-                <button className="bg-[#00A63E] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                <button className="bg-[#00A63E] text-white px-6 py-2 rounded-lg hover:bg-[#00A63E] transition-colors font-medium">
                   Get Started
                 </button>
               </div>

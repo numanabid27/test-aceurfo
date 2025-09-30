@@ -1,3 +1,4 @@
+"use client"
 import { ArrowRight, CheckCircle, Check, Star , Award } from 'lucide-react';
 import { FAQS, PLANS, SERVICES, STATS, STEPS, TEAM } from './home.constant';
 import Faqs from './faqs.component';
@@ -5,21 +6,22 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function HomePage() {
+
   return (
     <>
-        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-br banner py-[90px]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <div>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                    Professional
-                    <span className="text-[#00A63E] block">Bookkeeping</span>
-                    Made Simple
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        Professional
+                        Bookkeeping
+                        Made Simple
                     </h1>
-                    <p className="text-xl text-gray-600 mt-6 leading-relaxed">
-                    Focus on growing your business while we handle your books. Our expert team provides 
-                    accurate, timely financial records so you can make informed decisions.
+                    <p className="text-xl text-white mt-6 leading-relaxed">
+                        Focus on growing your business while we handle your books. Our expert team provides 
+                        accurate, timely financial records so you can make informed decisions.
                     </p>
                     
                     {/* Benefits */}
@@ -32,31 +34,23 @@ export default function HomePage() {
                     ].map((benefit, index) => (
                         <div key={index} className="flex items-center">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                        <span className="text-gray-700">{benefit}</span>
+                        <span className="text-white">{benefit}</span>
                         </div>
                     ))}
                     </div>
 
                     {/* CTA Buttons */}
                     <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                    <button className="bg-[#00A63E] text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center">
+                    <button className="bg-[#00A63E] text-white px-8 py-4 rounded-lg hover:bg-[#00A63E] transition-colors font-semibold flex items-center justify-center">
                         Start Free Trial
                         <ArrowRight className="ml-2 h-5 w-5" />
                     </button>
-                    <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-gray-400 transition-colors font-semibold">
+                    <button className="border-2 border-gray-300 text-white px-8 py-4 rounded-lg  transition-colors font-semibold">
                         Schedule Demo
                     </button>
                     </div>
 
-                    {/* Trust Indicators */}
-                    <div className="mt-12 pt-8 border-t border-gray-200">
-                    <p className="text-sm text-gray-500 mb-4">Trusted by 10,000+ businesses</p>
-                    <div className="flex items-center space-x-8 opacity-60">
-                        <div className="text-2xl font-bold text-gray-400">TechCorp</div>
-                        <div className="text-2xl font-bold text-gray-400">StartupXYZ</div>
-                        <div className="text-2xl font-bold text-gray-400">GrowthCo</div>
-                    </div>
-                    </div>
+                    
                 </div>
 
                 {/* Right Content - Dashboard Preview */}
@@ -169,7 +163,7 @@ export default function HomePage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {PLANS?.map((plan, index) => (
                     <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 relative ${
-                    plan.popular ? 'ring-2 ring-blue-600 transform scale-105' : ''
+                    plan.popular ? 'ring-2 ring-[#00A63E] transform scale-105' : ''
                     }`}>
                     {plan.popular && (
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -200,7 +194,7 @@ export default function HomePage() {
 
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                         plan.popular 
-                        ? 'bg-[#00A63E] text-white hover:bg-blue-700' 
+                        ? 'bg-[#00A63E] text-white hover:bg-[#00A63E]' 
                         : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                     }`}>
                         Get Started
@@ -238,7 +232,7 @@ export default function HomePage() {
                     services, regardless of size or industry. That's why we've built scalable 
                     solutions that grow with your business.
                     </p>
-                    <button className="bg-[#00A63E] text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                    <button className="bg-[#00A63E] text-white px-8 py-3 rounded-lg hover:bg-[#00A63E] transition-colors font-semibold">
                     Learn More About Us
                     </button>
                 </div>

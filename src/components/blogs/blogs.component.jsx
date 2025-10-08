@@ -2,6 +2,7 @@ import React from "react";
 import { BLOGS } from "./blogs.constant";
 import Banner from "@/common/components/banner/banner";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Blogs() {
 
@@ -34,9 +35,9 @@ export default function Blogs() {
                 <p className="text-gray-600 text-sm mt-2 line-clamp-3">
                   {blog.description}
                 </p>
-                <button className="mt-4 inline-block text-[#00A63E] font-medium hover:underline">
+                <Link href={`/blogs/${blog.slug}`} className="mt-4 inline-block text-[#00A63E] font-medium hover:underline">
                   Read More →
-                </button>
+                </Link>
               </div>
             </div>
           ))}

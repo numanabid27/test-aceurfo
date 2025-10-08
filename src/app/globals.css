@@ -18,3 +18,52 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
+.parse_html h2{
+  font-weight: 700;
+  font-size: 24px;
+  padding: 20px 0;
+}
+.parse_html h3{
+  font-weight: 700;
+  font-size: 22px;
+  padding: 20px 0 0;
+}
+.parse_html p{
+  padding: 14px 0;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.parse_html ul{
+  padding-top: 10px;
+}
+.parse_html ul li span{
+  line-height: 1.5;
+  display: block;
+  font-size: 18px;
+}
+.parse_html ul li{
+  list-style-type: disc;
+  margin: 0 0px 0 19px;
+  font-size: 18px;
+}
+.parse_html ul li h6{
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  padding: 10px 0;
+
+}
+@media screen and (max-width: 768px) {
+  .parse_html h2{
+    font-size: 20px;
+  }
+  .parse_html h3{
+    font-size: 18px;
+  }
+  .parse_html p, .parse_html ul li span, .parse_html ul li{
+    font-size: 16px;
+  }
+  .parse_html ul li h6{
+    font-size: 18px;
+  }
+}

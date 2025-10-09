@@ -1,10 +1,13 @@
+import cloud from "@/common/assets/img/automation.jpg"
+import network from "@/common/assets/img/network.jpg"
+
 export const BLOGS = [
   {
     id: 1,
     slug:"cloud-based-bookkeeping-solutions-for-small-businesses",
     title: "Cloud-Based Bookkeeping Solutions for Small Businesses",
     description: "Learn the fundamentals of bookkeeping and how it helps businesses stay organized financially.",
-    image: "",
+    image: cloud,
     date: "Sep 20, 2025",
     longDescription: `
       <p>In small enterprises, each second and every cent are of great importance. When changing jobs, budgeting can be very time-consuming. Using traditional methods of bookkeeping such as paper records and spreadsheets may lead to inefficiencies, errors, and losing some opportunities. As a small business gets bigger, the management of the finances becomes more complicated. As a result of this growing complexity, cloud-based bookkeeping solutions are an excellent option.</p>
@@ -76,7 +79,7 @@ export const BLOGS = [
     slug: "ai-in-bookkeeping-the-future-of-financial-automation",
     title: "AI in Bookkeeping: The Future of Financial Automation",
     description: "Discover strategies to prepare for tax season and maximize your returns with ease.",
-    image: "",
+    image: network,
     date: "Sep 18, 2025",
     longDescription: `
       <h2>The Role of AI and Automation in Modern Bookkeeping</h2>

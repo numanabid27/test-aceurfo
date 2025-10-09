@@ -5,18 +5,14 @@ export default function ContactComponent() {
   return (
     
         <section className="pb-20 bg-gray-50">
-             <Banner title="Contact" desc={<>At <span class="font-semibold">Bookkeeping.com</span>, we offer a wide
-                      range of financial services tailored to meet the diverse needs of our
-                      clients. Our team of experts is committed to delivering exceptional
-                      service and strategic solutions. Explore our services below:</>} />
+            <Banner title="Contact Us" desc="From today, ensure well-informed decisions that bring change to the life of your business. AccureCFO helps you unlock finance mastery with enhanced efficiency! " />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
                 <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Ready to Get Started?
+                    Ready to Step Up for Success? 
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Contact us today for a free consultation and discover how we can help 
-                    streamline your financial operations.
+                    Experience financial transparency to maximize your business's profit. Our professionals are ready to uplift accounting standards
                 </p>
                 </div>
 

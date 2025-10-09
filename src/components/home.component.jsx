@@ -15,22 +15,19 @@ export default function HomePage() {
                 {/* Left Content */}
                 <div>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                        Professional
-                        Bookkeeping
-                        Made Simple
+                        BUILD PROFESSIONAL FINANCIAL RECORD 
                     </h1>
                     <p className="text-xl text-white mt-6 leading-relaxed">
-                        Focus on growing your business while we handle your books. Our expert team provides 
-                        accurate, timely financial records so you can make informed decisions.
+                        Maintain financial records and handle bookkeeping professionally is not complicated with AccureCFO. We manage business finances that welcomes success. 
                     </p>
                     
                     {/* Benefits */}
                     <div className="mt-8 space-y-3">
                     {[
-                        'Dedicated bookkeeping team',
-                        'Monthly financial statements',
-                        'Tax-ready books year-round',
-                        'Real-time financial dashboard'
+                        'Simple and accurate management ',
+                        'Skilled and passionate experts ',
+                        'Financial Reporting ',
+                        'Budgeting and Forecasting '
                     ].map((benefit, index) => (
                         <div key={index} className="flex items-center">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
@@ -97,7 +94,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    What We Offer- Our Edge, Your Advantage
+                    Top Business Financial Services 
                 </h2>
             </div>
 

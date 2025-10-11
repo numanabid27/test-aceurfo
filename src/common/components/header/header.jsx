@@ -1,12 +1,37 @@
 "use client";
-import { Menu, X, Calculator } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import logo from "@/common/assets/img/logo.png"
 import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const [hash, setHash] = useState('');
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const updateHash = () => setHash(window.location.hash || '');
+    updateHash();
+    window.addEventListener('hashchange', updateHash);
+    return () => window.removeEventListener('hashchange', updateHash);
+  }, []);
+
+  const isActive = (href) => {
+    // anchor/hash links
+    if (!href) return false;
+    if (href.startsWith('#')) {
+      return hash === href;
+    }
+
+    // root
+    if (href === '/') return pathname === '/';
+
+    // match exact or nested routes (e.g. /blogs and /blogs/[slug])
+    return pathname === href || pathname.startsWith(href + '/');
+  };
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -19,20 +44,20 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-[#00A63E] font-medium transition-colors">
+            <Link href="/" className={`${isActive('/') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
               Home
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-[#00A63E] font-medium transition-colors">
+            <Link href="/about" className={`${isActive('/about') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
               About
             </Link>
-            <Link href="/blogs" className="text-gray-700 hover:text-[#00A63E] font-medium transition-colors">
+            <Link href="/blogs" className={`${isActive('/blogs') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
               Blogs
             </Link>
-            <Link href="#pricing" className="text-gray-700 hover:text-[#00A63E] font-medium transition-colors">
+            <Link href="#pricing" className={`${isActive('#pricing') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
               Pricing
             </Link>
            
-            <Link href="/contact" className="text-gray-700 hover:text-[#00A63E] font-medium transition-colors">
+            <Link href="/contact" className={`${isActive('/contact') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
               Contact
             </Link>
           </nav>
@@ -62,20 +87,20 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-[#00A63E] font-medium transition-colors">
+              <Link href="/" className={`${isActive('/') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
               Home
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-[#00A63E] font-medium transition-colors">
+            <Link href="/about" className={`${isActive('/about') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
               About
             </Link>
-            <Link href="/blogs" className="text-gray-700 hover:text-[#00A63E] font-medium transition-colors">
+            <Link href="/blogs" className={`${isActive('/blogs') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
               Blogs
             </Link>
-            <Link href="#pricing" className="text-gray-700 hover:text-[#00A63E] font-medium transition-colors">
+            <Link href="#pricing" className={`${isActive('#pricing') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
               Pricing
             </Link>
            
-            <Link href="/contact" className="text-gray-700 hover:text-[#00A63E] font-medium transition-colors">
+            <Link href="/contact" className={`${isActive('/contact') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
               Contact
             </Link>
               <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">

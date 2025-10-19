@@ -1,0 +1,131 @@
+.footer {
+  background-color: #111827;
+  color: white;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 4rem 2rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.companyInfo {
+  grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+  .companyInfo {
+    grid-column: span 1;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkItem {
+  margin-bottom: 0.75rem;
+}
+
+.link {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: white;
+}
+
+.bottomSection {
+  border-top: 1px solid #374151;
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+.bottomContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .bottomContent {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.copyright {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .bottomLinks {
+    margin-top: 0;
+  }
+}
+
+.bottomLink {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s;
+}
+
+.bottomLink:hover {
+  color: white;
+}

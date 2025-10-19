@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import styles from './faqs.module.css';
 
 export default function Faqs({ faqs }) {
   const [openIndex, setOpenIndex] = useState(null);
@@ -8,24 +9,24 @@ export default function Faqs({ faqs }) {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-6 text-center">
+    <div className={styles.container}>
+      <h2 className={styles.title}>
         Frequently Asked Questions
       </h2>
-      <div className="space-y-4">
+      <div className={styles.faqList}>
         {faqs?.map((faq, index) => (
           <div
             key={index}
-            className="border border-gray-200 rounded-2xl shadow-sm"
+            className={styles.faqItem}
           >
             <button
               onClick={() => toggleAccordion(index)}
-              className="flex justify-between items-center w-full p-4 text-left cursor-pointer"
+              className={styles.faqButton}
             >
-              <span className="font-medium">{faq.question}</span>
+              <span className={styles.faqQuestion}>{faq.question}</span>
               <svg
-                className={`w-5 h-5 transition-transform duration-300 ${
-                  openIndex === index ? "rotate-180" : ""
+                className={`${styles.faqIcon} ${
+                  openIndex === index ? styles.faqIconRotated : ""
                 }`}
                 fill="none"
                 stroke="currentColor"
@@ -41,11 +42,11 @@ export default function Faqs({ faqs }) {
             </button>
             {openIndex === index && (
                 <div
-                    className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                        openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                    className={`${styles.faqAnswer} ${
+                        openIndex === index ? styles.faqAnswerOpen : styles.faqAnswerClosed
                     }`}
                 >
-                    <div className="p-4 border-t border-gray-200 text-gray-600">
+                    <div className={styles.faqAnswerContent}>
                         {faq.answer}
                     </div>
                 </div>

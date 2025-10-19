@@ -1,6 +1,7 @@
 import Banner from '@/common/components/banner/banner';
 import { BLOGS } from '../blogs/blogs.constant';
 import parse from 'html-react-parser';
+import styles from './blog-detail.module.css';
 
 
 export default function BlogDetail({slug}) {
@@ -8,7 +9,7 @@ export default function BlogDetail({slug}) {
     return (
         <>
             <Banner title="Blog Detail" desc={data.title} />
-            <section className='py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <section className={styles.blogDetailSection}>
                 <div className='parse_html'>
                     {parse(data?.longDescription)}
                 </div>

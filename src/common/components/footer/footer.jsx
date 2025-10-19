@@ -3,81 +3,64 @@ import { Calculator} from 'lucide-react';
 import Link from 'next/link';
 import logo from "@/common/assets/img/white-logo.png";
 import Image from 'next/image';
+import styles from './footer.module.css';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="md:col-span-1">
-            <div className="flex items-center mb-4">
-              <Image src={logo} alt="AccureCFO" className="w-[204px]" />
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.grid}>
+          <div className={styles.companyInfo}>
+            <div className={styles.logoContainer}>
+              <Image src={logo} alt="AccureCFO" style={{width: '204px', height:"unset"}} />
             </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className={styles.description}>
               Professional bookkeeping services that help businesses grow through 
               better financial management and strategic insights.
             </p>
-            {/* <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div> */}
           </div>
 
-          {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Monthly Bookkeeping</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Tax Preparation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Financial Analysis</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Payroll Services</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">CFO Advisory</a></li>
+            <h3 className={styles.sectionTitle}>Services</h3>
+            <ul className={styles.linkList}>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>Monthly Bookkeeping</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>Tax Preparation</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>Financial Analysis</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>Payroll Services</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>CFO Advisory</a></li>
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-3">
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+            <h3 className={styles.sectionTitle}>Company</h3>
+            <ul className={styles.linkList}>
+              <li className={styles.linkItem}><a href="#about" className={styles.link}>About Us</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>Careers</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>Blog</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>Case Studies</a></li>
+              <li className={styles.linkItem}><a href="#contact" className={styles.link}>Contact</a></li>
             </ul>
           </div>
 
-          {/* Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">API Reference</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">System Status</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Security</a></li>
+            <h3 className={styles.sectionTitle}>Support</h3>
+            <ul className={styles.linkList}>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>Help Center</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>Documentation</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>API Reference</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>System Status</a></li>
+              <li className={styles.linkItem}><a href="#" className={styles.link}>Security</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+        <div className={styles.bottomSection}>
+          <div className={styles.bottomContent}>
+            <p className={styles.copyright}>
               © 2025 AccureCFO. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy & terms and conditions</Link>
+            <div className={styles.bottomLinks}>
+              <Link href="/privacy-policy" className={styles.bottomLink}>Privacy Policy & terms and conditions</Link>
             </div>
           </div>
         </div>

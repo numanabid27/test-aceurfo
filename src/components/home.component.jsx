@@ -4,45 +4,43 @@ import { FAQS, PLANS, SERVICES, STATS, STEPS, TEAM } from './home.constant';
 import Faqs from './faqs.component';
 import Link from 'next/link';
 import Image from 'next/image';
+import styles from './home.module.css';
 
 export default function HomePage() {
 
   return (
     <>
-        <section className="bg-gradient-to-br banner py-[90px]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Left Content */}
+        <section className={styles.bannerSection}>
+            <div className={styles.container}>
+                <div className={styles.heroGrid}>
                 <div>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    <h1 className={styles.heroTitle}>
                         BUILD PROFESSIONAL FINANCIAL RECORD 
                     </h1>
-                    <p className="text-xl text-white mt-6 leading-relaxed">
+                    <p className={styles.heroDescription}>
                         Maintain financial records and handle bookkeeping professionally is not complicated with AccureCFO. We manage business finances that welcomes success. 
                     </p>
                     
-                    {/* Benefits */}
-                    <div className="mt-8 space-y-3">
+                    <div className={styles.benefitsList}>
                     {[
                         'Simple and accurate management ',
                         'Skilled and passionate experts ',
                         'Financial Reporting ',
                         'Budgeting and Forecasting '
                     ].map((benefit, index) => (
-                        <div key={index} className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                        <span className="text-white">{benefit}</span>
+                        <div key={index} className={styles.benefitItem}>
+                        <CheckCircle style={{height: '1.25rem', width: '1.25rem', color: '#10b981', marginRight: '0.75rem'}} />
+                        <span className={styles.benefitText}>{benefit}</span>
                         </div>
                     ))}
                     </div>
 
-                    {/* CTA Buttons */}
-                    <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                    <button className="bg-[#00A63E] text-white px-8 py-4 rounded-lg hover:bg-[#00A63E] transition-colors font-semibold flex items-center justify-center">
+                    <div className={styles.ctaButtons}>
+                    <button className={styles.primaryBtn}>
                         Start Free Trial
-                        <ArrowRight className="ml-2 h-5 w-5" />
+                        <ArrowRight style={{marginLeft: '0.5rem', height: '1.25rem', width: '1.25rem'}} />
                     </button>
-                    <button className="border-2 border-gray-300 text-white px-8 py-4 rounded-lg  transition-colors font-semibold">
+                    <button className={styles.secondaryBtn}>
                         Schedule Demo
                     </button>
                     </div>
@@ -50,36 +48,35 @@ export default function HomePage() {
                     
                 </div>
 
-                {/* Right Content - Dashboard Preview */}
-                <div className="relative">
-                    <div className="bg-white rounded-2xl shadow-2xl p-6 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    <div className="bg-gray-100 rounded-lg p-4 mb-4">
-                        <div className="flex items-center justify-between mb-4">
-                        <h3 className="font-semibold text-gray-900">Financial Overview</h3>
-                        <span className="text-sm text-gray-500">This Month</span>
+                <div className={styles.dashboardPreview}>
+                    <div className={styles.dashboardCard}>
+                    <div className={styles.overviewSection}>
+                        <div className={styles.overviewHeader}>
+                        <h3 className={styles.overviewTitle}>Financial Overview</h3>
+                        <span className={styles.overviewDate}>This Month</span>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-white rounded-lg p-4">
-                            <p className="text-sm text-gray-600">Revenue</p>
-                            <p className="text-2xl font-bold text-green-600">$45,230</p>
-                            <p className="text-xs text-green-500">+12.5%</p>
+                        <div className={styles.statsGrid}>
+                        <div className={styles.statCard}>
+                            <p className={styles.statLabel}>Revenue</p>
+                            <p className={`${styles.statValue} ${styles.greenText}`}>$45,230</p>
+                            <p className={`${styles.statChange} ${styles.greenText}`}>+12.5%</p>
                         </div>
-                        <div className="bg-white rounded-lg p-4">
-                            <p className="text-sm text-gray-600">Expenses</p>
-                            <p className="text-2xl font-bold text-red-600">$18,940</p>
-                            <p className="text-xs text-red-500">+3.2%</p>
+                        <div className={styles.statCard}>
+                            <p className={styles.statLabel}>Expenses</p>
+                            <p className={`${styles.statValue} ${styles.redText}`}>$18,940</p>
+                            <p className={`${styles.statChange} ${styles.redText}`}>+3.2%</p>
                         </div>
                         </div>
                     </div>
-                    <div className="space-y-3">
+                    <div className={styles.transactionsList}>
                         {[
-                        { name: 'Client Payment', amount: '+$2,500', color: 'text-green-600' },
-                        { name: 'Office Rent', amount: '-$1,200', color: 'text-red-600' },
-                        { name: 'Software License', amount: '-$299', color: 'text-red-600' },
+                        { name: 'Client Payment', amount: '+$2,500', color: 'greenText' },
+                        { name: 'Office Rent', amount: '-$1,200', color: 'redText' },
+                        { name: 'Software License', amount: '-$299', color: 'redText' },
                         ].map((transaction, index) => (
-                        <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
-                            <span className="text-sm text-gray-700">{transaction.name}</span>
-                            <span className={`font-semibold ${transaction.color}`}>{transaction.amount}</span>
+                        <div key={index} className={styles.transactionItem}>
+                            <span className={styles.transactionName}>{transaction.name}</span>
+                            <span className={`${styles.transactionAmount} ${styles[transaction.color]}`}>{transaction.amount}</span>
                         </div>
                         ))}
                     </div>
@@ -89,26 +86,25 @@ export default function HomePage() {
             </div>
         </section>
 
-        {/* services */}
-        <section id="services" className="pt-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section id="services" className={styles.servicesSection}>
+        <div className={styles.container}>
+            <div className={styles.sectionTitle}>
+                <h2 className={styles.mainTitle}>
                     Top Business Financial Services 
                 </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className={styles.servicesGrid}>
                 {SERVICES?.map((service, index) => {
                     return (
-                        <div key={index} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300 group">
-                            <div className="mx-auto flex items-center justify-center mb-6">
-                                <Image src={service.icon} alt={service.title} className="w-16 h-16" />
+                        <div key={index} className={styles.serviceCard}>
+                            <div className={styles.serviceIcon}>
+                                <Image src={service.icon} alt={service.title} style={{width: '4rem', height: '4rem'}} />
                             </div>
-                            <h3 className="text-xl text-center font-semibold text-gray-900 mb-4">{service.title}</h3>
-                            <p className="text-gray-600 text-center mb-6 leading-relaxed">{service.description}</p>
+                            <h3 className={styles.serviceTitle}>{service.title}</h3>
+                            <p className={styles.serviceDescription}>{service.description}</p>
                             
-                            <Link href={`offer-detail/${service.slug}`} className="mt-6 py-[10px] px-[19px] flex justify-center bg-[#00A63E] text-white rounded-[6px] w-fit mx-auto cursor-pointer font-medium  transition-colors">
+                            <Link href={`offer-detail/${service.slug}`} className={styles.learnMoreBtn}>
                                 Learn More →
                             </Link>
                         </div>
@@ -118,81 +114,79 @@ export default function HomePage() {
         </div>
         </section>
 
-        {/* why choose us */}
-        <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className='text-center text-[30px] font-bold pb-[40px]'>Why Choose Us?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-5 text-white">
+        <section className={styles.whyChooseSection}>
+            <h2 className={styles.whyChooseTitle}>Why Choose Us?</h2>
+            <div className={styles.stepsGrid}>
                 {STEPS.map((step, index) => (
                     <div
                     key={index}
-                    className={`p-8 flex flex-col gap-2 ${
+                    className={`${styles.stepCard} ${
                         [
-                        "bg-green-700",
-                        "bg-green-600",
-                        "bg-green-500",
-                        "bg-green-400",
-                        "bg-green-300",
+                        styles.green700,
+                        styles.green600,
+                        styles.green500,
+                        styles.green400,
+                        styles.green300,
                         ][index]
                     }`}
                     >
-                    <h2 className="text-2xl font-bold">{step.number}</h2>
-                    <h3 className="text-lg font-semibold">{step.title}</h3>
-                    <p className="text-sm">{step.description}</p>
+                    <h2 className={styles.stepNumber}>{step.number}</h2>
+                    <h3 className={styles.stepTitle}>{step.title}</h3>
+                    <p className={styles.stepDescription}>{step.description}</p>
                     
                     </div>
                 ))}
             </div>
         </section>    
 
-        {/* pricing */}
-        <section id="pricing" className="py-20 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section id="pricing" className={styles.pricingSection}>
+            <div className={styles.container}>
+                <div className={styles.sectionTitle}>
+                <h2 className={styles.mainTitle}>
                     Simple, Transparent Pricing
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className={styles.aboutText}>
                     Choose the plan that fits your business needs. All plans include our core bookkeeping 
                     services with no hidden fees or long-term contracts.
                 </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className={styles.pricingGrid}>
                 {PLANS?.map((plan, index) => (
-                    <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 relative ${
-                    plan.popular ? 'ring-2 ring-[#00A63E] transform scale-105' : ''
+                    <div key={index} className={`${styles.pricingCard} ${
+                    plan.popular ? styles.popularCard : ''
                     }`}>
                     {plan.popular && (
-                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-[#00A63E] text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
-                            <Star className="w-4 h-4 mr-1" />
+                        <div className={styles.popularBadge}>
+                        <div className={styles.popularBadgeContent}>
+                            <Star style={{width: '1rem', height: '1rem', marginRight: '0.25rem'}} />
                             Most Popular
                         </div>
                         </div>
                     )}
                     
-                    <div className="text-center mb-8">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                        <p className="text-gray-600 mb-4">{plan.description}</p>
-                        <div className="flex items-baseline justify-center">
-                        <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                        <span className="text-gray-600 ml-1">{plan.period}</span>
+                    <div className={styles.planHeader}>
+                        <h3 className={styles.planName}>{plan.name}</h3>
+                        <p className={styles.planDescription}>{plan.description}</p>
+                        <div className={styles.priceContainer}>
+                        <span className={styles.price}>{plan.price}</span>
+                        <span className={styles.period}>{plan.period}</span>
                         </div>
                     </div>
 
-                    <ul className="space-y-4 mb-8">
+                    <ul className={styles.featuresList}>
                         {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                            <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                            <span className="text-gray-700">{feature}</span>
+                        <li key={featureIndex} className={styles.featureItem}>
+                            <Check style={{height: '1.25rem', width: '1.25rem', color: '#10b981', marginRight: '0.75rem', flexShrink: 0}} />
+                            <span className={styles.featureText}>{feature}</span>
                         </li>
                         ))}
                     </ul>
 
-                    <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                    <button className={`${styles.planButton} ${
                         plan.popular 
-                        ? 'bg-[#00A63E] text-white hover:bg-[#00A63E]' 
-                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                        ? styles.primaryPlanBtn
+                        : styles.secondaryPlanBtn
                     }`}>
                         Get Started
                     </button>
@@ -200,67 +194,60 @@ export default function HomePage() {
                 ))}
                 </div>
 
-                <div className="text-center mt-12">
-                <p className="text-gray-600 mb-4">Need a custom solution?</p>
-                <button className="text-[#00A63E] font-semibold hover:text-blue-700 transition-colors">
+                <div className={styles.pricingFooter}>
+                <p className={styles.pricingFooterText}>Need a custom solution?</p>
+                <button className={styles.enterpriseBtn}>
                     Contact us for enterprise pricing →
                 </button>
                 </div>
             </div>
         </section>
 
-        {/* about */}
-        <section  className="pt-20 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* About Content */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <section className={styles.aboutSection}>
+            <div className={styles.container}>
+                <div className={styles.aboutGrid}>
                 <div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    <h2 className={styles.aboutTitle}>
                     Your Trusted Financial Partner
                     </h2>
-                    <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                    <p className={styles.aboutText}>
                     For over 15 years, BookKeeper Pro has been helping businesses of all sizes 
                     maintain accurate financial records and make informed decisions. Our team of 
                     certified professionals combines expertise with cutting-edge technology to 
                     deliver exceptional results.
                     </p>
-                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                    <p className={styles.aboutText}>
                     We believe that every business deserves access to professional bookkeeping 
                     services, regardless of size or industry. That's why we've built scalable 
                     solutions that grow with your business.
                     </p>
-                    <button className="bg-[#00A63E] text-white px-8 py-3 rounded-lg hover:bg-[#00A63E] transition-colors font-semibold">
+                    <button className={styles.aboutBtn}>
                     Learn More About Us
                     </button>
                 </div>
-                <div className="relative">
+                <div className={styles.aboutImageContainer}>
                     <img 
                     src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
                     alt="Professional team working" 
-                    className="rounded-2xl shadow-lg"
+                    className={styles.aboutImage}
                     />
-                    <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
-                    <div className="flex items-center">
-                        <div className="bg-green-100 p-3 rounded-full mr-4">
-                        <Award className="h-6 w-6 text-green-600" />
+                    <div className={styles.certificationBadge}>
+                    <div className={styles.badgeContent}>
+                        <div className={styles.badgeIcon}>
+                        <Award style={{height: '1.5rem', width: '1.5rem', color: '#059669'}} />
                         </div>
                         <div>
-                        <p className="font-semibold text-gray-900">Certified Professionals</p>
-                        <p className="text-sm text-gray-600">CPA & QuickBooks ProAdvisors</p>
+                        <p className={styles.badgeTitle}>Certified Professionals</p>
+                        <p className={styles.badgeSubtitle}>CPA & QuickBooks ProAdvisors</p>
                         </div>
                     </div>
                     </div>
                 </div>
                 </div>
-
-    
-               
-
-                
             </div>
         </section>
         
-        <section  className="py-20">
+        <section className={styles.faqsSection}>
            <Faqs faqs={FAQS} />
         </section>
         

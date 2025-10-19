@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import logo from "@/common/assets/img/logo.png"
 import Image from 'next/image';
+import styles from './header.module.css';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,78 +35,69 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center">
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <div className={styles.headerContent}>
+          <div className={styles.logo}>
             <Image src={logo} width={180} height={180} alt="" />
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link href="/" className={`${isActive('/') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
+          <nav className={styles.nav}>
+            <Link href="/" className={`${styles.navLink} ${isActive('/') ? styles.navLinkActive : ''}`}>
               Home
             </Link>
-            <Link href="/about" className={`${isActive('/about') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
+            <Link href="/about" className={`${styles.navLink} ${isActive('/about') ? styles.navLinkActive : ''}`}>
               About
             </Link>
-            <Link href="/blogs" className={`${isActive('/blogs') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
+            <Link href="/blogs" className={`${styles.navLink} ${isActive('/blogs') ? styles.navLinkActive : ''}`}>
               Blogs
             </Link>
-            <Link href="#pricing" className={`${isActive('#pricing') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
+            <Link href="#pricing" className={`${styles.navLink} ${isActive('#pricing') ? styles.navLinkActive : ''}`}>
               Pricing
             </Link>
-           
-            <Link href="/contact" className={`${isActive('/contact') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
+            <Link href="/contact" className={`${styles.navLink} ${isActive('/contact') ? styles.navLinkActive : ''}`}>
               Contact
             </Link>
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-           
-            <button className="bg-[#00A63E] text-white px-6 py-2 rounded-lg hover:bg-[#00A63E] transition-colors font-medium">
+          <div className={styles.ctaButtons}>
+            <button className={styles.getStartedBtn}>
               Get Started
             </button>
           </div>
 
-          {/* Mobile menu button */}
           <button
-            className="md:hidden"
+            className={styles.mobileMenuBtn}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700" />
+              <X style={{height: '1.5rem', width: '1.5rem', color: '#374151'}} />
             ) : (
-              <Menu className="h-6 w-6 text-gray-700" />
+              <Menu style={{height: '1.5rem', width: '1.5rem', color: '#374151'}} />
             )}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <nav className="flex flex-col space-y-4">
-              <Link href="/" className={`${isActive('/') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
-              Home
-            </Link>
-            <Link href="/about" className={`${isActive('/about') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
-              About
-            </Link>
-            <Link href="/blogs" className={`${isActive('/blogs') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
-              Blogs
-            </Link>
-            <Link href="#pricing" className={`${isActive('#pricing') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
-              Pricing
-            </Link>
-           
-            <Link href="/contact" className={`${isActive('/contact') ? 'text-[#00A63E]' : 'text-gray-700'} hover:text-[#00A63E] font-medium transition-colors`}>
-              Contact
-            </Link>
-              <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
-               
-                <button className="bg-[#00A63E] text-white px-6 py-2 rounded-lg hover:bg-[#00A63E] transition-colors font-medium">
+          <div className={styles.mobileNav}>
+            <nav className={styles.mobileNavContent}>
+              <Link href="/" className={`${styles.navLink} ${isActive('/') ? styles.navLinkActive : ''}`}>
+                Home
+              </Link>
+              <Link href="/about" className={`${styles.navLink} ${isActive('/about') ? styles.navLinkActive : ''}`}>
+                About
+              </Link>
+              <Link href="/blogs" className={`${styles.navLink} ${isActive('/blogs') ? styles.navLinkActive : ''}`}>
+                Blogs
+              </Link>
+              <Link href="#pricing" className={`${styles.navLink} ${isActive('#pricing') ? styles.navLinkActive : ''}`}>
+                Pricing
+              </Link>
+              <Link href="/contact" className={`${styles.navLink} ${isActive('/contact') ? styles.navLinkActive : ''}`}>
+                Contact
+              </Link>
+              <div className={styles.mobileNavButtons}>
+                <button className={styles.getStartedBtn}>
                   Get Started
                 </button>
               </div>

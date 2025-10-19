@@ -1,11 +1,12 @@
 import React from "react";
+import styles from './banner.module.css';
 
 export default function Banner({title, desc}) {
   return (
-    <section className="bg-gradient-to-br from-[#00A63E] to-[transparent] py-20">
-      <div className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-[44px] font-bold text-[#fff] ">{title}</h1>
-        <p className="mt-4 text-[#fff] leading-relaxed ">
+    <section className={styles.banner}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.description}>
           {desc}
         </p>
       </div>

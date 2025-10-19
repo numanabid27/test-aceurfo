@@ -1,25 +1,25 @@
 import React from 'react'
 import { SERVICES } from '../home.constant';
 import Image from 'next/image';
+import styles from './offer.module.css';
 
 export default function OfferComponent({slug}) {
   const data = SERVICES.find((item) => item.slug === slug);
   return (
     <>
-      <section className="bg-gradient-to-br from-[#00A63E] to-[transparent] py-20">
-        <div className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-[44px] text-center font-bold text-[#fff] ">{data?.title}</h1>
-          
+      <section className={styles.offerBanner}>
+        <div className={styles.bannerContainer}>
+          <h1 className={styles.offerTitle}>{data?.title}</h1>
         </div>
       </section>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className='my-10'>
-          <div className='grid grid-cols-2 mt-5 gap-8 items-center'>
+      <div className={styles.contentContainer}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.contentGrid}>
             <div>
-              <p className='text-lg text-justify'>{data?.longDescription}</p>
+              <p className={styles.offerDescription}>{data?.longDescription}</p>
             </div>
             <div>
-              <Image src={data?.img} alt={data?.title} className='w-full rounded-[4px]' />
+              <Image src={data?.img} alt={data?.title} className={styles.offerImage} />
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from './faqs.module.css';
+import parse from 'html-react-parser';
 
 export default function Faqs({ faqs }) {
   const [openIndex, setOpenIndex] = useState(null);
@@ -47,7 +48,7 @@ export default function Faqs({ faqs }) {
                     }`}
                 >
                     <div className={styles.faqAnswerContent}>
-                        {faq.answer}
+                        {parse(faq.answer)}
                     </div>
                 </div>
             )}

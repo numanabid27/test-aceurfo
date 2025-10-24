@@ -157,20 +157,40 @@ export const TEAM = [
 
 export const FAQS = [
   {
-    question: "Does AccureCFO do all my bookkeeping tasks for me?",
+    question: "What is AccureCFO?",
     answer:
-      "Our bookkeeping experts handle all your bookkeeping needs for you.  Each month, we will check that your books are accurate and that your deductions are maximized or not.",
+      "AccureCFO is a bookkeeping service provider that performs accounting record-keeping for companies in the remote mode. We assist you with income & expense tracking, banking reconciliations, financial reporting, and keeping your books updated and accurate so you can concentrate on your core business.",
   },
   {
-    question: "Is it compulsory to connect my business accounts to AccureCFO?",
+    question: "What services does AccureCFO offer?",
     answer:
-      "Yes: Connecting your accounts to AccureCFO automates repetitive tasks like data entry, saving you time and effort. It eliminates the need for manual uploads. Thus, this ensures our bookkeeping team can work efficiently.",
+      `<ul>
+        <li>Bookkeeping Services</li>
+        <li>Financial Reporting</li>
+        <li>Payables & Receivables Reporting</li>
+        <li>Cash Flow Management</li>
+        <li>Software Implementations</li>
+        <li>QuickBooks</li>
+        <li>Xero</li>
+      </ul>`,
   },
   {
-    question: "Why does AccureCFO still need me to upload documents even if my accounts are connected?",
+    question: "What accounting/bookkeeping software is used?",
     answer:
-      "Sometimes, we need some extra documents, such as account statements or receipts, to verify the accuracy of the information. Sharing files with the bookkeeping team is swift and easy, allowing for quick document uploads.",
+      "We operate cloud-based software, such as QuickBooks Online, Xero, or other options of your choice. If the consumer has software installed, we'll work with it. However, if it is not installed, we can recommend it for your business.",
   },
+  {
+    question:"Does AccureCFO do all my bookkeeping tasks for me?",
+    answer:"Our bookkeeping experts handle all your bookkeeping needs for you.  Each month, we will check that your books are accurate and that your deductions are maximized or not."
+  },
+  {
+    question:"Is it mandatory to link my business accounts to AccureCFO?",
+    answer:"Yes: By linking your accounts to AccureCFO, repetitive work such as data entry is automated, freeing up time for you. It does away with the use of manual uploads. This way, our bookkeeping staff can work effectively."
+  },
+  {
+    question:"Why is AccureCFO still requiring me to upload documents if my accounts are linked?",
+    answer:"Occasionally, we require some additional documents, like account statements or receipts, for validation of the information being accurate. It is quick and easy to share files with the accounting team so that quick document uploads can be done."
+  }
 ];
 
 

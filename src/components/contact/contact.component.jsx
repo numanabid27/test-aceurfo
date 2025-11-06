@@ -52,16 +52,7 @@ export default function ContactComponent() {
                         placeholder="john@example.com"
                         />
                     </div>
-                    <div className={styles.formGroup}>
-                        <label className={styles.label}>
-                        Company
-                        </label>
-                        <input
-                        type="text"
-                        className={styles.input}
-                        placeholder="Your Company"
-                        />
-                    </div>
+                  
                     <div className={styles.formGroup}>
                         <label className={styles.label}>
                         Message

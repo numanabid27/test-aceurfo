@@ -5,6 +5,7 @@ import Faqs from './faqs.component';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './home.module.css';
+import map from "@/common/assets/img/map.png"
 
 export default function HomePage() {
 
@@ -139,7 +140,7 @@ export default function HomePage() {
             </div>
         </section>    
 
-        <section id="pricing" className={styles.pricingSection}>
+        <section className={styles.pricingSection}>
             <div className={styles.container}>
                 <div className={styles.sectionTitle}>
                 <h2 className={styles.mainTitle}>
@@ -204,46 +205,11 @@ export default function HomePage() {
         </section>
 
         <section className={styles.aboutSection}>
-            <div className={styles.container}>
-                <div className={styles.aboutGrid}>
-                <div>
-                    <h2 className={styles.aboutTitle}>
-                    Your Trusted Financial Partner
-                    </h2>
-                    <p className={styles.aboutText}>
-                    For over 15 years, BookKeeper Pro has been helping businesses of all sizes 
-                    maintain accurate financial records and make informed decisions. Our team of 
-                    certified professionals combines expertise with cutting-edge technology to 
-                    deliver exceptional results.
-                    </p>
-                    <p className={styles.aboutText}>
-                    We believe that every business deserves access to professional bookkeeping 
-                    services, regardless of size or industry. That's why we've built scalable 
-                    solutions that grow with your business.
-                    </p>
-                    <button className={styles.aboutBtn}>
-                    Learn More About Us
-                    </button>
-                </div>
-                <div className={styles.aboutImageContainer}>
-                    <img 
-                    src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
-                    alt="Professional team working" 
-                    className={styles.aboutImage}
-                    />
-                    <div className={styles.certificationBadge}>
-                    <div className={styles.badgeContent}>
-                        <div className={styles.badgeIcon}>
-                        <Award style={{height: '1.5rem', width: '1.5rem', color: '#059669'}} />
-                        </div>
-                        <div>
-                        <p className={styles.badgeTitle}>Certified Professionals</p>
-                        <p className={styles.badgeSubtitle}>CPA & QuickBooks ProAdvisors</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
+            <div>
+                <h2 className={styles.mainTitle} style={{textAlign:"center", marginBottom:"50px"}}>
+                    International Operations & Expansion
+                </h2>
+                <Image src={map} alt="" className={styles.mainAboutImage}  />
             </div>
         </section>
         

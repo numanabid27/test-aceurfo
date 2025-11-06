@@ -246,6 +246,19 @@
   .mainTitle {
     font-size: 2.25rem;
   }
+
+}
+
+.mainAboutImage{
+  width:100%;
+  height:120vh;
+}
+@media screen and (max-width:768px){
+    .mainAboutImage{
+    width:100%;
+    height:unset;
+    object-fit: contain;
+  }
 }
 
 .servicesGrid {

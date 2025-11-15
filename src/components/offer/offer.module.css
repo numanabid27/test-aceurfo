@@ -64,6 +64,11 @@
   gap: 2rem;
   align-items: center;
 }
+@media screen and (max-width:767px){
+  .contentGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .offerDescription {
   font-size: 1.125rem;

@@ -14,75 +14,75 @@ export default function HomePage() {
         <section className={styles.bannerSection}>
             <div className={styles.container}>
                 <div className={styles.heroGrid}>
-                <div>
-                    <h1 className={styles.heroTitle}>
-                        BUILD PROFESSIONAL FINANCIAL RECORD 
-                    </h1>
-                    <p className={styles.heroDescription}>
-                        Maintain financial records and handle bookkeeping professionally is not complicated with AccureCFO. We manage business finances that welcomes success. 
-                    </p>
-                    
-                    <div className={styles.benefitsList}>
-                    {[
-                        'Simple and accurate management ',
-                        'Skilled and passionate experts ',
-                        'Financial Reporting ',
-                        'Budgeting and Forecasting '
-                    ].map((benefit, index) => (
-                        <div key={index} className={styles.benefitItem}>
-                        <CheckCircle style={{height: '1.25rem', width: '1.25rem', color: '#10b981', marginRight: '0.75rem'}} />
-                        <span className={styles.benefitText}>{benefit}</span>
-                        </div>
-                    ))}
-                    </div>
-
-                    <div className={styles.ctaButtons}>
-                    <button className={styles.primaryBtn}>
-                        Start Free Trial
-                        <ArrowRight style={{marginLeft: '0.5rem', height: '1.25rem', width: '1.25rem'}} />
-                    </button>
-                    <button className={styles.secondaryBtn}>
-                        Schedule Demo
-                    </button>
-                    </div>
-
-                    
-                </div>
-
-                <div className={styles.dashboardPreview}>
-                    <div className={styles.dashboardCard}>
-                    <div className={styles.overviewSection}>
-                        <div className={styles.overviewHeader}>
-                        <h3 className={styles.overviewTitle}>Financial Overview</h3>
-                        <span className={styles.overviewDate}>This Month</span>
-                        </div>
-                        <div className={styles.statsGrid}>
-                        <div className={styles.statCard}>
-                            <p className={styles.statLabel}>Revenue</p>
-                            <p className={`${styles.statValue} ${styles.greenText}`}>$45,230</p>
-                            <p className={`${styles.statChange} ${styles.greenText}`}>+12.5%</p>
-                        </div>
-                        <div className={styles.statCard}>
-                            <p className={styles.statLabel}>Expenses</p>
-                            <p className={`${styles.statValue} ${styles.redText}`}>$18,940</p>
-                            <p className={`${styles.statChange} ${styles.redText}`}>+3.2%</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div className={styles.transactionsList}>
+                    <div>
+                        <h1 className={styles.heroTitle}>
+                            BUILD PROFESSIONAL FINANCIAL RECORD 
+                        </h1>
+                        <p className={styles.heroDescription}>
+                            Maintain financial records and handle bookkeeping professionally is not complicated with AccureCFO. We manage business finances that welcomes success. 
+                        </p>
+                        
+                        <div className={styles.benefitsList}>
                         {[
-                        { name: 'Client Payment', amount: '+$2,500', color: 'greenText' },
-                        { name: 'Office Rent', amount: '-$1,200', color: 'redText' },
-                        { name: 'Software License', amount: '-$299', color: 'redText' },
-                        ].map((transaction, index) => (
-                        <div key={index} className={styles.transactionItem}>
-                            <span className={styles.transactionName}>{transaction.name}</span>
-                            <span className={`${styles.transactionAmount} ${styles[transaction.color]}`}>{transaction.amount}</span>
-                        </div>
+                            'Simple and accurate management ',
+                            'Skilled and passionate experts ',
+                            'Financial Reporting ',
+                            'Budgeting and Forecasting '
+                        ].map((benefit, index) => (
+                            <div key={index} className={styles.benefitItem}>
+                            <CheckCircle style={{height: '1.25rem', width: '1.25rem', color: '#10b981', marginRight: '0.75rem'}} />
+                            <span className={styles.benefitText}>{benefit}</span>
+                            </div>
                         ))}
+                        </div>
+
+                        <div className={styles.ctaButtons}>
+                        <button className={styles.primaryBtn}>
+                            Start Free Trial
+                            <ArrowRight style={{marginLeft: '0.5rem', height: '1.25rem', width: '1.25rem'}} />
+                        </button>
+                        <button className={styles.secondaryBtn}>
+                            Schedule Demo
+                        </button>
+                        </div>
+
+                        
                     </div>
+
+                    <div className={styles.dashboardPreview}>
+                        <div className={styles.dashboardCard}>
+                        <div className={styles.overviewSection}>
+                            <div className={styles.overviewHeader}>
+                            <h3 className={styles.overviewTitle}>Financial Overview</h3>
+                            <span className={styles.overviewDate}>This Month</span>
+                            </div>
+                            <div className={styles.statsGrid}>
+                            <div className={styles.statCard}>
+                                <p className={styles.statLabel}>Revenue</p>
+                                <p className={`${styles.statValue} ${styles.greenText}`}>$45,230</p>
+                                <p className={`${styles.statChange} ${styles.greenText}`}>+12.5%</p>
+                            </div>
+                            <div className={styles.statCard}>
+                                <p className={styles.statLabel}>Expenses</p>
+                                <p className={`${styles.statValue} ${styles.redText}`}>$18,940</p>
+                                <p className={`${styles.statChange} ${styles.redText}`}>+3.2%</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div className={styles.transactionsList}>
+                            {[
+                            { name: 'Client Payment', amount: '+$2,500', color: 'greenText' },
+                            { name: 'Office Rent', amount: '-$1,200', color: 'redText' },
+                            { name: 'Software License', amount: '-$299', color: 'redText' },
+                            ].map((transaction, index) => (
+                            <div key={index} className={styles.transactionItem}>
+                                <span className={styles.transactionName}>{transaction.name}</span>
+                                <span className={`${styles.transactionAmount} ${styles[transaction.color]}`}>{transaction.amount}</span>
+                            </div>
+                            ))}
+                        </div>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
         </section>
@@ -195,21 +195,18 @@ export default function HomePage() {
                 ))}
                 </div>
 
-                <div className={styles.pricingFooter}>
-                <p className={styles.pricingFooterText}>Need a custom solution?</p>
-                <button className={styles.enterpriseBtn}>
-                    Contact us for enterprise pricing →
-                </button>
-                </div>
+              
             </div>
         </section>
 
         <section className={styles.aboutSection}>
-            <div>
+            <div className={styles.container} style={{ paddingTop:"0px !important"}}>
                 <h2 className={styles.mainTitle} style={{textAlign:"center", marginBottom:"50px"}}>
-                    International Operations & Expansion
+                    Our Presence
                 </h2>
-                <Image src={map} alt="" className={styles.mainAboutImage}  />
+                <div>
+                    <Image src={map} alt="" style={{width:"100%", height:"100%", objectFit:"contain"}} />
+                </div>
             </div>
         </section>
         

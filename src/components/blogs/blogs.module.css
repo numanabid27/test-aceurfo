@@ -12,7 +12,12 @@
     padding-right: 1.5rem;
   }
 }
-
+@media (max-width: 767x) {
+  .blogsSection {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
 @media (min-width: 1024px) {
   .blogsSection {
     padding-left: 2rem;

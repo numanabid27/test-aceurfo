@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle, Check, Star , Award } from 'lucide-react';
 
 export default function Pricing() {
     return(
-        <section className={styles.container}>
+        <section>
             <div className={styles.contactSection}>
                 <Banner title="Pricing" desc="Choose the plan that fits your business needs. All plans include our core bookkeeping services with no hidden fees or long-term contracts." />
                 <div className={styles.container}>

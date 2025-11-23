@@ -51,7 +51,7 @@ export default function AboutComponent() {
       <div className={styles.container}>
         <div className={styles.whyChooseSection}>
           <div className={styles.whyChooseLeft}>
-            <h6 className={styles.whyChooseTitle}>Why Choose AccureCFO</h6>
+            <h2 className={styles.whyChooseTitle}>Why Choose AccureCFO</h2>
             <p className={styles.whyChooseSubtitle}>
               AccureCFO brings innovation to businesses through talented minds. The possibility of delivering top-notch accounts solutions comes from a dedicated team of experts. 
             </p>
@@ -70,7 +70,7 @@ export default function AboutComponent() {
             </p>
           </div>
         </div>
-        <Image src={banner} alt="" className={styles.bannerImage} />
+        <Image src={banner} alt="AccureCFO professional financial management team" className={styles.bannerImage} />
       </div>
 
         <div className={styles.teamSection}>

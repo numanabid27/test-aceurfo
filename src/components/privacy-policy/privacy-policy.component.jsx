@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
   return (
     <section className={styles.privacySection}>
       <div>
-        <h1 className={styles.sectionTitle}>Terms and Conditions</h1>
+        <h1 className={styles.sectionTitle}>Privacy Policy & Terms and Conditions</h1>
         <p className={styles.sectionText}>
           AccureCFO efficiently resolves your queries with clear definitions, 
           eliminating ambiguity. While creating the best financial strategies, 
@@ -87,7 +87,7 @@ export default function PrivacyPolicy() {
       </div>
 
       <div className={styles.sectionWrapper}>
-        <h1 className={styles.sectionTitle}>Privacy Policy</h1>
+        <h2 className={styles.sectionTitle}>Privacy Policy</h2>
         <p className={styles.sectionText}>
           We begin the process by collecting your information, including business 
           details, to design a finance strategy. Afterwards, our experts prepare 

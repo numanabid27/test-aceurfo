@@ -8,7 +8,7 @@ export default function BlogDetail({slug}) {
     const data = BLOGS.find((item) => item.slug === slug);
     return (
         <>
-            <Banner title="Blog Detail" desc={data.title} />
+            <Banner title={data.title} desc={data.description} />
             <section className={styles.blogDetailSection}>
                 <div className='parse_html'>
                     {parse(data?.longDescription)}

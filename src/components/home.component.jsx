@@ -131,7 +131,7 @@ export default function HomePage() {
                         ][index]
                     }`}
                     >
-                    <h2 className={styles.stepNumber}>{step.number}</h2>
+                    <span className={styles.stepNumber}>{step.number}</span>
                     <h3 className={styles.stepTitle}>{step.title}</h3>
                     <p className={styles.stepDescription}>{step.description}</p>
                     
@@ -205,7 +205,7 @@ export default function HomePage() {
                     Our Presence
                 </h2>
                 <div>
-                    <Image src={map} alt="" style={{width:"100%", height:"100%", objectFit:"contain"}} />
+                    <Image src={map} alt="AccureCFO global presence and service locations map" style={{width:"100%", height:"100%", objectFit:"contain"}} />
                 </div>
             </div>
         </section>

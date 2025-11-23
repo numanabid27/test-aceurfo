@@ -8,6 +8,28 @@ export async function generateStaticParams() {
   }))
 }
 
+export async function generateMetadata({ params }) {
+  const slug = await params;
+  const blog = BLOGS.find((item) => item.slug === slug.slug);
+  
+  if (!blog) {
+    return {
+      title: "Blog Not Found",
+    };
+  }
+
+  return {
+    title: blog.title,
+    description: blog.description,
+    openGraph: {
+      title: blog.title,
+      description: blog.description,
+      type: "article",
+      publishedTime: blog.date,
+    },
+  };
+}
+
 export default async function page({params}) {
     const slug = await params;
   return <BlogDetail slug={slug.slug} />

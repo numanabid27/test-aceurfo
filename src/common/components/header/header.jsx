@@ -20,6 +20,10 @@ export default function Header() {
     return () => window.removeEventListener('hashchange', updateHash);
   }, []);
 
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
   const isActive = (href) => {
     // anchor/hash links
     if (!href) return false;
@@ -39,7 +43,9 @@ export default function Header() {
       <div className={styles.container}>
         <div className={styles.headerContent}>
           <div className={styles.logo}>
-            <Image src={logo} width={180} height={180} alt="" />
+            <Link href="/">
+              <Image src={logo} width={180} height={180} alt="AccureCFO - Professional Bookkeeping Services" />
+            </Link>
           </div>
 
           <nav className={styles.nav}>
@@ -61,14 +67,16 @@ export default function Header() {
           </nav>
 
           <div className={styles.ctaButtons}>
-            <button className={styles.getStartedBtn}>
+            <Link href="/contact" className={styles.getStartedBtn}>
               Get Started
-            </button>
+            </Link>
           </div>
 
           <button
             className={styles.mobileMenuBtn}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
               <X style={{height: '1.5rem', width: '1.5rem', color: '#374151'}} />

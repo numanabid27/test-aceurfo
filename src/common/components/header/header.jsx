@@ -98,16 +98,16 @@ export default function Header() {
               <Link href="/blogs" className={`${styles.navLink} ${isActive('/blogs') ? styles.navLinkActive : ''}`}>
                 Blogs
               </Link>
-              <Link href="#pricing" className={`${styles.navLink} ${isActive('#pricing') ? styles.navLinkActive : ''}`}>
+              <Link href="/pricing" className={`${styles.navLink} ${isActive('/pricing') ? styles.navLinkActive : ''}`}>
                 Pricing
               </Link>
               <Link href="/contact" className={`${styles.navLink} ${isActive('/contact') ? styles.navLinkActive : ''}`}>
                 Contact
               </Link>
               <div className={styles.mobileNavButtons}>
-                <button className={styles.getStartedBtn}>
+                <Link href="/contact" className={styles.getStartedBtn}>
                   Get Started
-                </button>
+                </Link>
               </div>
             </nav>
           </div>

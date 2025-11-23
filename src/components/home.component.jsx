@@ -37,13 +37,13 @@ export default function HomePage() {
                         </div>
 
                         <div className={styles.ctaButtons}>
-                        <button className={styles.primaryBtn}>
+                        <Link href="/contact" className={styles.primaryBtn}>
                             Start Free Trial
                             <ArrowRight style={{marginLeft: '0.5rem', height: '1.25rem', width: '1.25rem'}} />
-                        </button>
-                        <button className={styles.secondaryBtn}>
+                        </Link>
+                        <Link href="/contact" className={styles.secondaryBtn}>
                             Schedule Demo
-                        </button>
+                        </Link>
                         </div>
 
                         
@@ -184,13 +184,13 @@ export default function HomePage() {
                         ))}
                     </ul>
 
-                    <button className={`${styles.planButton} ${
+                    <Link href="/contact" className={`${styles.planButton} ${
                         plan.popular 
                         ? styles.primaryPlanBtn
                         : styles.secondaryPlanBtn
                     }`}>
                         Get Started
-                    </button>
+                    </Link>
                     </div>
                 ))}
                 </div>

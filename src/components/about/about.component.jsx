@@ -1,6 +1,6 @@
 import { STATS, TEAM } from "../home.constant";
 import Image from "next/image";
-import banner from "@/common/assets/img/about.jpg"
+import banner from "@/common/assets/img/about.png"
 import Banner from "@/common/components/banner/banner";
 import about from "@/common/assets/img/about1.jpg"
 import styles from './about.module.css';
@@ -81,12 +81,14 @@ export default function AboutComponent() {
             AccureCFO's certified team knows how to bring transitions to a business through expertise, the latest tools, and cloud-based software.
             </p>
             <div className={styles.teamGrid}>
-            {TEAM.map((member, index) => (
+            {TEAM?.map((member, index) => (
             <div key={index} className={styles.teamMember}>
                 <div className={styles.memberImageContainer}>
-                <img
+                <Image
                     src={member.image}
                     alt={member.name}
+                    width={100}
+                    height={100}
                     className={styles.memberImage}
                 />
                 </div>
@@ -94,7 +96,6 @@ export default function AboutComponent() {
                 {member.name}
                 </h4>
                 <p className={styles.memberRole}>{member.role}</p>
-                <p className={styles.memberBio}>{member.bio}</p>
             </div>
             ))}
         </div>

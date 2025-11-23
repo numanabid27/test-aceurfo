@@ -13,6 +13,8 @@ import cash from "@/common/assets/img/cashh.png"
 import testing from "@/common/assets/img/testing.png"
 import accounting from "@/common/assets/img/accounting.png"
 import graph from "@/common/assets/img/graph-report.png"
+import ceo from "@/common/assets/img/ceo.png"
+import cto from "@/common/assets/img/cto.jpeg"
 
 
 export const SERVICES = [
@@ -136,21 +138,18 @@ export const STATS = [
 export const TEAM = [
     {
       name: 'Sarah Johnson',
-      role: 'Founder & CEO',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
-      bio: 'CPA with 20+ years of experience helping businesses grow through better financial management.'
-    },
-    {
-      name: 'Michael Chen',
       role: 'Head of Operations',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
-      bio: 'Former Big 4 consultant specializing in process optimization and financial systems.'
+      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
     },
     {
-      name: 'Emily Rodriguez',
+      name: 'Arif Sheikh',
+      role: ' Founder & CEO',
+      image: ceo,
+    },
+    {
+      name: 'Lemme vick',
       role: 'Senior Bookkeeper',
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
-      bio: 'QuickBooks ProAdvisor with expertise in small business accounting and tax preparation.'
+      image: cto
     }
 ];
 

@@ -179,6 +179,8 @@
 .bannerImage {
   margin: 0 auto;
   display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .teamSection {

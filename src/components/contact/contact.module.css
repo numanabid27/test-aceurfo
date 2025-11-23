@@ -194,8 +194,10 @@
   color: #111827;
 }
 
-.infoContent p {
+.infoContent p,
+.infoContent a {
   color: #6b7280;
+  text-decoration: none;
 }
 
 .infoContent .small {
@@ -231,6 +233,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
+  text-decoration: none;
 }
 
 .ctaBtn:hover {

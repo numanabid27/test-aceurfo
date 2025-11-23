@@ -1,6 +1,7 @@
 import Banner from '@/common/components/banner/banner';
 import { Phone, Mail, MapPin, Clock  } from 'lucide-react';
 import styles from './contact.module.css';
+import Link from 'next/link';
 
 export default function ContactComponent() {
   return (
@@ -92,7 +93,7 @@ export default function ContactComponent() {
                         </div>
                         <div className={styles.infoContent}>
                             <h4>Email</h4>
-                            <p>hello@bookkeeperPro.com</p>
+                            <Link href="mailto:info@accurecfo.com">info@accurecfo.com</Link>
                             <p className={styles.small}>We'll respond within 24 hours</p>
                         </div>
                         </div>
@@ -102,7 +103,7 @@ export default function ContactComponent() {
                         </div>
                         <div className={styles.infoContent}>
                             <h4>Office</h4>
-                            <p>123 Business Ave<br />Suite 100<br />New York, NY 10001</p>
+                            <p>123 Business Ave Suite 100 New York, NY 10001</p>
                         </div>
                         </div>
                         <div className={styles.infoItem}>
@@ -124,9 +125,14 @@ export default function ContactComponent() {
                     <p className={styles.ctaDescription}>
                         Schedule a free consultation and see how we can help your business grow.
                     </p>
-                    <button className={styles.ctaBtn}>
+                   
+                    <Link
+                        href="https://calendly.com/arif-sheikh1125/30min"
+                        target="_blank"
+                        className={styles.ctaBtn}
+                    >
                         Schedule Free Consultation
-                    </button>
+                    </Link>
                     </div>
                 </div>
                 </div>

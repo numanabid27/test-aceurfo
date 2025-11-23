@@ -36,17 +36,7 @@ export default function HomePage() {
                         ))}
                         </div>
 
-                        <div className={styles.ctaButtons}>
-                        <Link href="/contact" className={styles.primaryBtn}>
-                            Start Free Trial
-                            <ArrowRight style={{marginLeft: '0.5rem', height: '1.25rem', width: '1.25rem'}} />
-                        </Link>
-                        <Link href="/contact" className={styles.secondaryBtn}>
-                            Schedule Demo
-                        </Link>
-                        </div>
-
-                        
+                       
                     </div>
 
                     <div className={styles.dashboardPreview}>

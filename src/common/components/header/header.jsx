@@ -44,7 +44,7 @@ export default function Header() {
         <div className={styles.headerContent}>
           <div className={styles.logo}>
             <Link href="/">
-              <Image src={logo} width={180} height={180} alt="AccureCFO - Professional Bookkeeping Services" />
+              <Image src={logo} width={105} height={105} alt="AccureCFO - Professional Bookkeeping Services" />
             </Link>
           </div>
 

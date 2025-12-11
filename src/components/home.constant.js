@@ -15,6 +15,7 @@ import accounting from "@/common/assets/img/accounting.png"
 import graph from "@/common/assets/img/graph-report.png"
 import ceo from "@/common/assets/img/ceo.png"
 import cto from "@/common/assets/img/cto.jpeg"
+import founder from "@/common/assets/img/founder.png"
 
 
 export const SERVICES = [
@@ -137,9 +138,9 @@ export const STATS = [
 
 export const TEAM = [
     {
-      name: 'Sarah Johnson',
-      role: 'Head of Operations',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
+      name: 'Tariq Mannan',
+      role: 'Co-Founder & Advisor - Gulf Region',
+      image: founder,
     },
     {
       name: 'Arif Sheikh',

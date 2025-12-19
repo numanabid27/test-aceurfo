@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './home.module.css';
 import map from "@/common/assets/img/map.png"
+import SuccessStories from './success-stories.component';
 
 export default function HomePage() {
 
@@ -199,10 +200,16 @@ export default function HomePage() {
                 </div>
             </div>
         </section>
-        
+
+        <section className={styles.storySec}>
+           <SuccessStories />
+        </section>
+
         <section className={styles.faqsSection}>
            <Faqs faqs={FAQS} />
         </section>
+        
+        
         
     </>
   )

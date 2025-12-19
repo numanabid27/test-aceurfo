@@ -687,7 +687,10 @@
 }
 
 .faqsSection {
-  padding: 5rem 0;
+  padding: 3rem 0 5rem;
+}
+.storySec{
+  padding: 2rem 0 0rem;
 }
 @media (max-width: 767px) {
   .faqsSection {

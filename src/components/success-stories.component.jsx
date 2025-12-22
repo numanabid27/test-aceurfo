@@ -24,9 +24,9 @@ const videoSlides = [
   },
   {
     id: 4,
-    videoId: '0-0H11A0oBk',
+    videoId: 'dqT4xgBcBJM',
     title: 'Client Success Story 4',
-    description: 'Hear from our satisfied clients'
+    description: 'Gulf Client'
   }
 ];
 
@@ -76,17 +76,17 @@ export default function SuccessStories() {
         Success Stories From Our Clients
       </h2>
       <div className={styles.sliderWrapper}>
-        <button 
-          className={styles.navButton} 
+        <button
+          className={styles.navButton}
           onClick={prevSlide}
           disabled={currentIndex === 0}
           aria-label="Previous slide"
         >
           <ChevronLeft size={24} />
         </button>
-        
+
         <div className={styles.sliderContainer}>
-          <div 
+          <div
             className={styles.slidesTrack}
             style={{ transform: `translateX(-${currentIndex * (100 / videosPerView)}%)` }}
           >
@@ -110,8 +110,8 @@ export default function SuccessStories() {
           </div>
         </div>
 
-        <button 
-          className={styles.navButton} 
+        <button
+          className={styles.navButton}
           onClick={nextSlide}
           disabled={currentIndex >= maxIndex}
           aria-label="Next slide"

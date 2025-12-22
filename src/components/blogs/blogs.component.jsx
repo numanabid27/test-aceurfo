@@ -10,10 +10,10 @@ export default function Blogs() {
 
   return (
     <>
-      <Banner title="Blogs" desc={<>At <span style={{fontWeight: 600}}>Accurecfo.com</span>, we offer a wide
-          range of financial services tailored to meet the diverse needs of our
-          clients. Our team of experts is committed to delivering exceptional
-          service and strategic solutions. Explore our services below:</>} />
+      <Banner title="Blogs" desc={<>At <span style={{ fontWeight: 600 }}>AccureCFO</span>, we offer a wide
+        range of financial services tailored to meet the diverse needs of our
+        clients. Our team of experts is committed to delivering exceptional
+        service and strategic solutions. Explore our services below:</>} />
       <section className={styles.blogsSection}>
         <div className={styles.blogsGrid}>
           {BLOGS.map((blog) => (

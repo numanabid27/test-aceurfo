@@ -7,26 +7,26 @@ const videoSlides = [
   {
     id: 1,
     videoId: '0-0H11A0oBk',
-    title: 'Client Success Story 1',
-    description: 'Finance Operations'
+    title: 'Umair Aziz, Owner & Editor of Connect South Asia TV',
+    description: 'Umair Aziz Bihari, Connect South Asia TV, recommends AccureCFO for expert bookkeeping, accounting support, and outstanding client service.'
   },
   {
     id: 2,
     videoId: 'XeD8Y-bVnEY',
-    title: 'Client Success Story 2',
-    description: 'Marketing Agency Owner'
+    title: 'Rafay Mohammad Founder of RK Media Group LLC',
+    description: 'Rafay, founder of RK Media, highlights AccureCFO’s professionalism, consistency, and ability to deliver accurate bookkeeping and data support every time.'
   },
   {
     id: 3,
     videoId: 'xWKfkn1ryGs',
-    title: 'Client Success Story 3',
-    description: 'Real Estate Investor'
+    title: 'Karim Hashmi, Owner of Karim Group LLC',
+    description: 'Karim Hashmi, a real estate investor in North Carolina, shares his 2.5+ years of experience with AccureCFO, praising their accuracy, reliability, and efficient financial management.'
   },
   {
     id: 4,
     videoId: 'dqT4xgBcBJM',
-    title: 'Client Success Story 4',
-    description: 'Gulf Client'
+    title: 'Mubarak Alesmail, owner of Al Masar Consultancy, Kuwait',
+    description: 'Mubarak Alesmail, Al Masar Consultancy, Kuwait), shares his 3+ years of experience with AccureCFO, highlighting reliable backend bookkeeping support, strong analysis, and excellent communication.'
   }
 ];
 

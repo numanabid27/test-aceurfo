@@ -231,7 +231,7 @@ export default function ContactComponent() {
                         </div>
                         <div className={styles.infoContent}>
                             <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
+                            <Link href="tel:+16149607335">+1 (614) 960-7335</Link>
                             <p className={styles.small}>Mon-Fri 9am-6pm EST</p>
                         </div>
                         </div>

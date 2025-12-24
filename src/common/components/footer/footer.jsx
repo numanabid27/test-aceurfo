@@ -92,7 +92,7 @@ export default function Footer() {
       </div>
       
       <a 
-        href="https://wa.me/+923323216772" 
+        href="https://wa.me/16149607335"
         target="_blank" 
         rel="noopener noreferrer"
         className={styles.whatsappFloat}

@@ -14,7 +14,7 @@ import testing from "@/common/assets/img/testing.png"
 import accounting from "@/common/assets/img/accounting.png"
 import graph from "@/common/assets/img/graph-report.png"
 import ceo from "@/common/assets/img/ceo.png"
-import cto from "@/common/assets/img/sho.jpeg"
+import cto from "@/common/assets/img/sho.png"
 import founder from "@/common/assets/img/founder.png"
 
 
@@ -144,13 +144,13 @@ export const TEAM = [
   },
   {
     name: 'Arif Sheikh',
-    role: ' Founder & CEO',
+    role: ' Founder & CEO | MBA (Finance) | US Tax Specialist | Data & Financial Analytics',
     image: ceo,
   },
   {
     name: 'Shazia',
-    role: 'Audit Advisor',
-    image: cto
+    role: 'Audit Advisor | Chartered Accountant (CA)',
+    image: cto,
   }
 ];
 

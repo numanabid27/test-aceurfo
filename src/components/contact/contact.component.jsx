@@ -251,7 +251,7 @@ export default function ContactComponent() {
                         </div>
                         <div className={styles.infoContent}>
                             <h4>Office</h4>
-                            <p>123 Business Ave Suite 100 New York, NY 10001</p>
+                            <p>Columbus, Ohio, USA</p>
                         </div>
                         </div>
                         <div className={styles.infoItem}>
